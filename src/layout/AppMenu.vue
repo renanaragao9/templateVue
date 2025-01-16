@@ -10,7 +10,18 @@ const model = ref([
             { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' },
             { label: 'Configuração', icon: 'pi pi-fw pi-cog', to: '/configuracao' },
             { label: 'Espaços', icon: 'pi pi-fw pi-map', to: '/espacos' },
-            { label: 'Produtos', icon: 'pi pi-fw pi-box', to: '/produtos' }
+            { label: 'Produtos', icon: 'pi pi-fw pi-box', to: '/produtos' },
+            {
+                label: 'Auxiliares',
+                icon: 'pi pi-fw pi-tags',
+                items: [
+                    {
+                        label: 'Categorias de Produtos',
+                        icon: 'pi pi-fw pi-circle',
+                        to: 'categorias-de-produtos'
+                    }
+                ]
+            }
         ]
     },
     {

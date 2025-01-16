@@ -29,6 +29,11 @@ const router = createRouter({
                     component: () => import('@/views/Admin/space.vue')
                 },
                 {
+                    path: '/categorias-de-produtos',
+                    name: 'productCategory',
+                    component: () => import('@/views/Admin/productCategory.vue')
+                },
+                {
                     path: '/uikit/formlayout',
                     name: 'formlayout',
                     component: () => import('@/views/uikit/FormLayout.vue')
@@ -146,6 +151,16 @@ const router = createRouter({
             path: '/auth/error',
             name: 'error',
             component: () => import('@/views/pages/auth/Error.vue')
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: () => import('@/views/Auth/Login.vue')
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: () => import('@/views/Auth/Register.vue')
         }
     ]
 });
