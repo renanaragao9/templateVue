@@ -14,9 +14,19 @@ const router = createRouter({
                     component: () => import('@/views/Dashboard.vue')
                 },
                 {
-                    path: '/negocio',
-                    name: 'negocio',
+                    path: '/configuracao',
+                    name: 'settings',
                     component: () => import('@/views/Admin/Business.vue')
+                },
+                {
+                    path: '/espacos',
+                    name: 'spaces',
+                    component: () => import('@/views/Admin/space.vue')
+                },
+                {
+                    path: '/produtos',
+                    name: 'products',
+                    component: () => import('@/views/Admin/space.vue')
                 },
                 {
                     path: '/uikit/formlayout',

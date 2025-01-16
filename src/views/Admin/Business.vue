@@ -45,6 +45,32 @@ function handleToggleChange(day) {
         day.closingTime = '00:00';
     }
 }
+
+// Funções de máscara
+function maskCNPJ(value) {
+    return value
+        .replace(/\D/g, '')
+        .replace(/^(\d{2})(\d)/, '$1.$2')
+        .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
+        .replace(/\.(\d{3})(\d)/, '.$1/$2')
+        .replace(/(\d{4})(\d)/, '$1-$2')
+        .slice(0, 18);
+}
+
+function maskPhone(value) {
+    return value
+        .replace(/\D/g, '')
+        .replace(/^(\d{2})(\d)/, '($1) $2')
+        .replace(/(\d{4})(\d)/, '$1-$2')
+        .slice(0, 14);
+}
+
+function maskCEP(value) {
+    return value
+        .replace(/\D/g, '')
+        .replace(/^(\d{5})(\d)/, '$1-$2')
+        .slice(0, 9);
+}
 </script>
 
 <template>
@@ -97,17 +123,27 @@ function handleToggleChange(day) {
                     <div class="col-span-12 lg:col-span-4">
                         <label for="businessCNPJ">CNPJ</label>
                         <!-- Preencher com o CNPJ do negócio -->
-                        <InputText id="businessCNPJ" type="text" class="w-full" />
+                        <InputText id="businessCNPJ" type="text" class="w-full" @input="(event) => (event.target.value = maskCNPJ(event.target.value))" />
                     </div>
                     <div class="col-span-12 lg:col-span-4">
                         <label for="businessPhone">Telefone</label>
                         <!-- Preencher com o telefone do negócio -->
-                        <InputText id="businessPhone" type="text" class="w-full" />
+                        <InputText id="businessPhone" type="text" class="w-full" @input="(event) => (event.target.value = maskPhone(event.target.value))" />
                     </div>
                     <div class="col-span-12 lg:col-span-4">
                         <label for="businessEmail">Email</label>
                         <!-- Preencher com o email do negócio -->
                         <InputText id="businessEmail" type="text" class="w-full" />
+                    </div>
+                    <div class="col-span-12 lg:col-span-4">
+                        <label for="ownerName">Nome do Proprietário</label>
+                        <!-- Preencher com o nome do proprietário do negócio -->
+                        <InputText id="ownerName" type="text" class="w-full" />
+                    </div>
+                    <div class="col-span-12 lg:col-span-4">
+                        <label for="ownerCPF">CPF do Proprietário</label>
+                        <!-- Preencher com o CPF do proprietário do negócio -->
+                        <InputText id="ownerCPF" type="text" class="w-full" @input="(event) => (event.target.value = maskCPF(event.target.value))" />
                     </div>
                     <div class="col-span-12 lg:col-span-12">
                         <label for="businessDescription">Descrição</label>
@@ -145,7 +181,7 @@ function handleToggleChange(day) {
                     <div class="col-span-12 lg:col-span-4">
                         <label for="businessZip">CEP</label>
                         <!-- Preencher com o CEP do negócio -->
-                        <InputText id="businessZip" type="text" class="w-full" />
+                        <InputText id="businessZip" type="text" class="w-full" @input="(event) => (event.target.value = maskCEP(event.target.value))" />
                     </div>
                     <div class="col-span-12 lg:col-span-4">
                         <label for="businessStreet">Rua</label>
