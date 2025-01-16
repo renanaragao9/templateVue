@@ -15,21 +15,21 @@ function setChartData() {
         datasets: [
             {
                 type: 'bar',
-                label: 'Subscriptions',
+                label: 'Aluguel de campos',
                 backgroundColor: documentStyle.getPropertyValue('--p-primary-400'),
                 data: [4000, 10000, 15000, 4000],
                 barThickness: 32
             },
             {
                 type: 'bar',
-                label: 'Advertising',
+                label: 'Vendas de produtos',
                 backgroundColor: documentStyle.getPropertyValue('--p-primary-300'),
                 data: [2100, 8400, 2400, 7500],
                 barThickness: 32
             },
             {
                 type: 'bar',
-                label: 'Affiliate',
+                label: 'Outros',
                 backgroundColor: documentStyle.getPropertyValue('--p-primary-200'),
                 data: [4100, 5200, 3400, 7400],
                 borderRadius: {
@@ -90,7 +90,7 @@ onMounted(() => {
 
 <template>
     <div class="card">
-        <div class="font-semibold text-xl mb-4">Revenue Stream</div>
+        <div class="font-semibold text-xl mb-4">Fluxo de Receita</div>
         <Chart type="bar" :data="chartData" :options="chartOptions" class="h-80" />
     </div>
 </template>
