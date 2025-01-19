@@ -14,6 +14,11 @@ const router = createRouter({
                     component: () => import('@/views/Dashboard.vue')
                 },
                 {
+                    path: '/pdv',
+                    name: 'pdv',
+                    component: () => import('@/views/Admin/PDVView.vue')
+                },
+                {
                     path: '/configuracao',
                     name: 'settings',
                     component: () => import('@/views/Admin/Business.vue')
@@ -32,6 +37,16 @@ const router = createRouter({
                     path: '/categorias-de-produtos',
                     name: 'productCategory',
                     component: () => import('@/views/Admin/productCategory.vue')
+                },
+                {
+                    path: '/mensagens',
+                    name: 'messages',
+                    component: () => import('@/views/Admin/MessageView.vue')
+                },
+                {
+                    path: '/chamados',
+                    name: 'tickets',
+                    component: () => import('@/views/Admin/TicketView.vue')
                 },
                 {
                     path: '/uikit/formlayout',
@@ -161,6 +176,11 @@ const router = createRouter({
             path: '/register',
             name: 'register',
             component: () => import('@/views/Auth/Register.vue')
+        },
+        {
+            path: '/inicio',
+            name: 'init',
+            component: () => import('@/views/Admin/SettingView.vue')
         }
     ]
 });

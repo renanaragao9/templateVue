@@ -11,6 +11,7 @@ const model = ref([
             { label: 'Configuração', icon: 'pi pi-fw pi-cog', to: '/configuracao' },
             { label: 'Espaços', icon: 'pi pi-fw pi-map', to: '/espacos' },
             { label: 'Produtos', icon: 'pi pi-fw pi-box', to: '/produtos' },
+            { label: 'Mensagens', icon: 'pi pi-fw pi-inbox', to: '/mensagens' },
             {
                 label: 'Auxiliares',
                 icon: 'pi pi-fw pi-tags',
