@@ -181,6 +181,11 @@ const router = createRouter({
             path: '/inicio',
             name: 'init',
             component: () => import('@/views/Admin/SettingView.vue')
+        },
+        {
+            path: '/boas-vindas',
+            name: 'welcomeMenu',
+            component: () => import('@/views/Admin/WelcomeMenuView.vue')
         }
     ]
 });

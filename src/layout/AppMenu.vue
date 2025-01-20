@@ -8,21 +8,12 @@ const model = ref([
         label: 'Inicio',
         items: [
             { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' },
+            { label: 'PDV', icon: 'pi pi-fw pi-desktop', to: '/pdv' },
             { label: 'Configuração', icon: 'pi pi-fw pi-cog', to: '/configuracao' },
             { label: 'Espaços', icon: 'pi pi-fw pi-map', to: '/espacos' },
             { label: 'Produtos', icon: 'pi pi-fw pi-box', to: '/produtos' },
             { label: 'Mensagens', icon: 'pi pi-fw pi-inbox', to: '/mensagens' },
-            {
-                label: 'Auxiliares',
-                icon: 'pi pi-fw pi-tags',
-                items: [
-                    {
-                        label: 'Categorias de Produtos',
-                        icon: 'pi pi-fw pi-circle',
-                        to: 'categorias-de-produtos'
-                    }
-                ]
-            }
+            { label: 'Categorias de Produtos', icon: 'pi pi-fw pi-tags', to: 'categorias-de-produtos' }
         ]
     },
     {
